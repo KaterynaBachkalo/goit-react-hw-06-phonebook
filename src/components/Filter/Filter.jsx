@@ -1,6 +1,6 @@
 import css from './Filter.module.css';
 
-export const Filter = ({ filter, onChange }) => {
+const Filter = ({ filter, onChange }) => {
   return (
     <label className={css.label}>
       Find contacts name
@@ -14,3 +14,5 @@ export const Filter = ({ filter, onChange }) => {
     </label>
   );
 };
+
+export default Filter;

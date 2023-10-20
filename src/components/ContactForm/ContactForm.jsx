@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import css from './ContactForm.module.css';
 
-export const ContactForm = ({ addContact }) => {
+const ContactForm = ({ addContact }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -53,3 +53,5 @@ export const ContactForm = ({ addContact }) => {
     </form>
   );
 };
+
+export default ContactForm;
