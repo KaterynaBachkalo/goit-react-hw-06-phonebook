@@ -14,16 +14,14 @@ import storage from 'redux-persist/lib/storage';
 import { contactReducer } from './contactSlice';
 
 const contactConfig = {
-  key: 'phonebook',
+  key: 'contacts',
   storage,
   whitelist: ['contacts'],
   //   blacklist: ['filter'],
 };
 
 export const store = configureStore({
-  reducer: {
-    phonebook: persistReducer(contactConfig, contactReducer),
-  },
+  reducer: persistReducer(contactConfig, contactReducer),
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {

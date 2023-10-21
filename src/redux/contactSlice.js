@@ -8,7 +8,7 @@ const INITIAL_STATE = {
 
 const contactsSlice = createSlice({
   // Ім'я слайсу
-  name: 'phonebook',
+  name: 'contacts',
   // Початковий стан редюсера слайсу
   initialState: INITIAL_STATE,
   reducers: {
