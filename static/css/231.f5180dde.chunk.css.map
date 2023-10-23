@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/231.f5180dde.chunk.css","mappings":"AAAA,yBAGE,cAAe,CAFf,eAAgB,CAChB,SAEF","sources":["components/ContactList/ContactList.module.css"],"sourcesContent":[".list {\n  list-style: none;\n  padding: 0;\n  font-size: 20px;\n}\n"],"names":[],"sourceRoot":""}
