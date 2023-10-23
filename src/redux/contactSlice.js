@@ -41,3 +41,5 @@ const contactsSlice = createSlice({
 export const { addContact, deleteContact, setFilters } = contactsSlice.actions;
 // Редюсер слайсу
 export const contactReducer = contactsSlice.reducer;
+
+// У елемент <ul id="test"></ul> потрібно додати три <li></li> елементи. Вибрати <ul> елемент за допомогою id = “test”. Створити кожен новий <li></li> елемент за допомогою методу createElement() та додати до списоку за допомогою методу appendChild().

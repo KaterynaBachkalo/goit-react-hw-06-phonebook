@@ -1,10 +1,8 @@
-import { Suspense, lazy } from 'react';
 import css from './ContactList.module.css';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contactSlice';
 import { useFilter, useContacts } from '../../hooks/useSelectors';
-
-const ContactItem = lazy(() => import('components/ContactItem/ContactItem'));
+import ContactItem from 'components/ContactItem/ContactItem';
 
 const ContactList = () => {
   const filter = useFilter();
@@ -26,19 +24,17 @@ const ContactList = () => {
   const filteredContacts = getFilteredContacts();
 
   return (
-    <Suspense>
-      <ul className={css.list}>
-        {filteredContacts.map(({ name, id, number }) => (
-          <ContactItem
-            name={name}
-            id={id}
-            key={id}
-            number={number}
-            deleteContact={onDeleteContact}
-          />
-        ))}
-      </ul>
-    </Suspense>
+    <ul className={css.list}>
+      {filteredContacts.map(({ name, id, number }) => (
+        <ContactItem
+          name={name}
+          id={id}
+          key={id}
+          number={number}
+          deleteContact={onDeleteContact}
+        />
+      ))}
+    </ul>
   );
 };
 
